@@ -1,0 +1,17 @@
+Lab JJ2
+1. Create new MVC Application (.NET Framework)
+2. Create a 'Products' controller
+3. Create a 'Products' model with the following fields
+        - Name (Required, Maxlength 20)
+        - Description (Required, Maxlength 50)
+        - Price (Required, Decimal)
+        - Any other fields you want, be creative
+4. Index Action to show add page
+        public ActionResult Index()
+        {
+            return View();
+        }
+5. Post Action to Save users data
+      - Success returns to home
+      - Failure returns to Add page
+6. Add server and client side validation

@@ -17,6 +17,7 @@ namespace LabJJ2.Models
         public string Description { get; set; }
 
         [Required]
+
         // Test for double or for currency
         public double Price { get; set; }
     }

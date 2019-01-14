@@ -1,23 +1,22 @@
 ﻿@{
-    /**/
-
     ViewBag.Title = "Index";
 }
+
 @using LabJJ2.Models
 @model Products
 
 <h2>Lab JJ 2 Privacy Infiltrator</h2>
-<h3>Your info are belong to me.</h3>
 
 <div class="container">
     <div class="row">
-        @using (Html.BeginForm("Edit", "ProductController", FormMethod.Post))
+        @using (Html.BeginForm("Edit", "Products", FormMethod.Post))
         {
             <div class="form-group">
                 @Html.LabelFor(x => x.Name)
                 @Html.TextBoxFor(x => x.Name, new { @class = "form-control", placeholder = "Enter name of the thing:" })
                 @Html.ValidationMessageFor(x => x.Name, "Please enter a valid name.", new { @class = "text-danger" })
             </div>
+
             <button type="submit" class="btn-success">Submit</button>
         }
     </div>

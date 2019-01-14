@@ -7,14 +7,26 @@
 
 <h2>Lab JJ 2 Privacy Infiltrator</h2>
 
+<!--How do I know this uses bootstrap?-->
+
 <div class="container">
     <div class="row">
         @using (Html.BeginForm("Edit", "Products", FormMethod.Post))
         {
             <div class="form-group">
                 @Html.LabelFor(x => x.Name)
-                @Html.TextBoxFor(x => x.Name, new { @class = "form-control", placeholder = "Enter name of the thing:" })
+                @Html.TextBoxFor(x => x.Name, new { @class = "form-control", placeholder = "Enter name of the thing." })
                 @Html.ValidationMessageFor(x => x.Name, "Please enter a valid name.", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Description)
+                @Html.TextAreaFor(x => x.Description, new { @class = "form-control", placeholder = "Enter description of the thing." })
+                @Html.ValidationMessageFor(x => x.Description, "Please enter a valid description.", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Price)
+                @Html.TextBoxFor(x => x.Price, new { @class = "form-control", placeholder = "Enter price of the thing." })
+                @Html.ValidationMessageFor(x => x.Price, "Please enter a valid price.", new { @class = "text-danger" })
             </div>
 
             <button type="submit" class="btn-success">Submit</button>
